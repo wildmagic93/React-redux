@@ -1,28 +1,29 @@
-import React, {ReactDOM, useState} from 'react';
+import React, {useState} from 'react';
 import {Reducer} from './store.js';
-
+import ReactDOM from 'react-dom';
 
 class App extends React.component{
     constructor(props) {
         super(props);
-        state = useState('unknown');
+        const [state] = useState('unknown');
     };
-
+    
     action() {
-        effect = {
+        const effect = {
             type: 'change',
             payload: 'vheqtjhtrj'
         };
         Reducer(this.state, effect);
     }
 
-
+    
 
     render() {
         return (
         <div>
-            <button onClick={this.action}>Click</button>
-            <h1 state={this.state}>Hello {this.state}</h1>
+            
+            <button onClick={this.action} style={{color: 'white'}}>Click</button>
+            <h1 style={{color: 'white'}}>Hello {this.state}</h1>
         </div>
         );
     }
